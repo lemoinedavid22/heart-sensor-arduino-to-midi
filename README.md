@@ -1,7 +1,7 @@
 # heart-sensor-arduino-to-midi
 
 Goal : 
-4 heartbeat sensors on an arduino mega send a note on a separate channel to Live. 
+4 heartbeat sensors on an arduino mega each send a note on a separate channel to Live. 
 
 For now : 
 - unable to write a proper code that would allow multiple sensors on one same board sending to different midi channels. 
