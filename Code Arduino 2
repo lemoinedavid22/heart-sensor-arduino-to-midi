@@ -1,0 +1,39 @@
+// Code with two signals routed to two different midi channels, only problem : 
+// it's impossible to set the delay in a proper way so it doesn't either throws notes all other, 
+// or puts them on top of each other resulting in missing part of the info. 
+
+int noteOn = 144;
+int noteOn2 = 145;
+int piezo = A0;
+int piezo2 = A1;
+int threshold = 50;//anything over fifty means we've hit the piezo
+
+void setup(){
+  Serial.begin(9600);
+}
+
+void loop(){
+  int piezoVal = analogRead(piezo);
+  int piezoVal = analogRead(piezo2);
+ 
+ 
+  if (piezoVal>threshold){
+    MIDImessage(noteOn, 60, 127);
+    delay(50);
+    MIDImessage(noteOn, 60, 0);
+  }
+  if (piezoVal2>threshold){
+    MIDImessage(noteOn2, 62, 127);
+    delay(50);
+    MIDImessage(noteOn2, 62, 0);
+
+ 
+  }
+}
+
+//send MIDI message
+void MIDImessage(byte command, byte data1, byte data2) {
+  Serial.write(command);
+  Serial.write(data1);
+  Serial.write(data2);
+}
