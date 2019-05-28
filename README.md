@@ -9,7 +9,7 @@ For now :
 - use multiple boards
 
 Chain : 
-Arduino & clone --> headless midiserial --> Live
+Arduino & clone --> hairless midiserial --> Live
 
 Code :
 piezo example of this tutorial : https://www.instructables.com/id/Arduino-Sensors-and-MIDI/
