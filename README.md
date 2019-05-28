@@ -1,13 +1,19 @@
 # heart-sensor-arduino-to-midi
 
-Objectif : 
-4 capteurs cardiaques sur une arduino mega envoient chacun une note midi sur un channel différent vers Live. 
+Goal : 
+4 heartbeat sensors on an arduino mega send a note on a separate channel to Live. 
 
-Pour l'instant : 
-ça marche avec un capteur 
-headless-midiserial fait le lien entre la carte et Live. 
-(j'ai pris l'exemple pour piezo de ce tuto : https://www.instructables.com/id/Arduino-Sensors-and-MIDI/)
+For now : 
+- unable to write a proper code that would allow multiple sensors on one same board sending to different midi channels. 
+- found a simple code that works for one sensor per board
+- use multiple boards
 
-Problème : 
-tout con.. j'arrive pas à savoir comment multiplier le truc dans le code pour avoir 4 capteurs sur 4 entrées analog qui envoient vers 4 channels midi séparés. 
+Chain : 
+Arduino & clone --> headless midiserial --> Live
 
+Code :
+piezo example of this tutorial : https://www.instructables.com/id/Arduino-Sensors-and-MIDI/
+
+Boards : 
+- Arduino mega 
+- Uno 340 arduino compatible. Crashes issues when connecting to High Sierra solved by installing drivers following : https://firxworx.com/blog/maker/arduino/installing-ch340-ch34x-drivers-on-macos-for-cheap-arduino-clones/
